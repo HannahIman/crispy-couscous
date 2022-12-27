@@ -1,0 +1,43 @@
+//Requests user to enter 3 numbers and returns the largest number entered
+
+#include <iostream>
+
+int largest(int& a, int& b, int& c);
+
+using namespace std;
+
+int main()
+{
+	int a, b, c; //numbers to be entered
+
+	cout << "Enter three numbers to find the largest:" << endl; 
+	
+	cout << "a = "; //ask for first number
+	cin >> a; //store first number
+	
+	cout << "\n b = "; //ask for second number
+	cin >> b; //store second number
+	
+	cout << "\n c = "; //ask for third number
+	cin >> c; //store third number
+
+	int large = largest(a, b, c); //for output
+
+	cout << "\nLargest of " << a << ", " << b << ", and " << c << " is: " << large << endl;
+	return 0;
+}
+
+int largest(int& a, int& b, int& c) //determines largest of the three numbers entered by user
+{
+
+	int big = 0;
+	
+	if (a > b)
+		big = a;
+	else
+		big = b;
+	if (c > big)
+		big = c;
+	return big;
+
+}
